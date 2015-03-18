@@ -259,7 +259,7 @@ Group apache
 # e-mailed.  This address appears on some server-generated pages, such
 # as error documents.  e.g. admin@your-domain.com
 #
-ServerAdmin webmaster@square.gs
+#ServerAdmin root@localhost
 
 #
 # ServerName gives the name and port that the server uses to identify itself.
@@ -273,8 +273,7 @@ ServerAdmin webmaster@square.gs
 # You will have to access it by its address anyway, and this will make 
 # redirections work in a sensible way.
 #
-#ServerName www.example.com:80
-ServerName square.gs:80
+ServerName 5.175.160.228:80
 
 #
 # UseCanonicalName: Determines how Apache constructs self-referencing 
@@ -400,7 +399,7 @@ DocumentRoot "/var/www/html"
 # negotiated documents.  The MultiViews Option can be used for the 
 # same purpose, but it is much slower.
 #
-DirectoryIndex 
+DirectoryIndex index.php
 
 #
 # AccessFileName: The name of the file to look for in each directory
@@ -534,7 +533,7 @@ CustomLog logs/access_log combined
 # Set to "EMail" to also include a mailto: link to the ServerAdmin.
 # Set to one of:  On | Off | EMail
 #
-ServerSignature Off
+ServerSignature On
 
 #
 # Aliases: Add here as many aliases as you need (with no limit). The format is 
